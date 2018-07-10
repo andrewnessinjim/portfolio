@@ -1,0 +1,43 @@
+@import 'reset';
+@import 'constants';
+@import 'custom_mixins';
+@import 'header';
+@import 'footer';
+@import 'showcase';
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Inconsolata');
+
+body {
+    background-color: darken($primary-color, 20%);
+    color: lighten($color: $primary-color, $amount: 70%);
+}
+
+@media screen and (min-width: $max-site-container-width) {
+    .super-container {
+        margin: 0 auto;
+    }
+}
+
+.main-highlight {
+    img {
+        max-width: 100%;
+    }
+}
+
+.main {
+    margin: 0 auto;
+    max-width: $max-site-container-width;
+}
+
+@media screen and (max-width: $max-site-container-width) {
+    .main {
+        margin: 10px;
+    }
+}
+
+h2 {
+    font-family: 'IM Fell English SC', serif;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+}

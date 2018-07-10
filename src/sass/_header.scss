@@ -1,0 +1,57 @@
+@import 'constants';
+
+.header {
+    
+    background-color: darken($color: $primary_color, $amount: 30%);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 3px ridge darken($primary_color, 90%);
+    text-align: center;
+    box-sizing: border-box;
+    
+    .header-content-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        width: 52px;
+    }
+
+    .name-and-intro-container {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .name {
+        margin: 0;
+    }
+
+    .one-line-intro {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .header-content-container {
+        justify-content: space-between;
+        max-width: $max-site-container-width;
+        .logo-container {
+            width: auto;
+        }
+        .name-and-intro-container {
+            width: auto;
+            text-align: end;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import 'constants';
+
+.footer {
+    padding: 20px 0;
+    background-color: darken($color: $primary_color, $amount: 30%);
+    border-top: 3px ridge darken($primary_color, 90%);
+
+    .logos_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    %logo_style {
+        max-width: 96px;
+        border: 3px groove darken($primary_color, 20%);
+        background-color: $primary_color;
+        box-shadow: 2px 2px 2px rgba(lighten($primary_color, 20%), 0.3);
+        transition: all 0.3s;
+        border-radius: 5px;
+    }
+
+    %logo_style_hover {
+        transform: scale(1.2);
+        cursor: pointer;
+        border-radius: 18px;
+    }
+    .linkedin_logo {
+        @extend %logo_style;
+        padding: 8px;
+    }
+
+    .github_logo {
+        @extend %logo_style;
+    }
+
+    .linkedin_logo:hover {
+        @extend %logo_style_hover;;
+    }
+
+    .github_logo:hover {
+        @extend %logo_style_hover;
+    }
+}
